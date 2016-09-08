@@ -25,12 +25,6 @@ export O3=~/src/openvpn3
 ```
 
 ### Step 4
-Download source tarballs (.tar.gz or .tgz) for these dependency libraries into 
-```
-~/Downloads
-```
-
-### Step 5
 See the file ~/src/openvpn3/lib-versions for the expected version numbers of each dependency.  If you want to use a different version of the library than listed here, you can edit this file.
 
 ```
@@ -61,6 +55,12 @@ Note that while LZO is listed in lib-versions, it is not required for Mac builds
 
 OpenSSL is required, however OpenVPN 3 for Mac doesn't use OpenSSL in the standard way. Instead, it cherry-picks some ASM-optimized crypto and hash algorithms from OpenSSL to speed up PolarSSL's low-level crypto processing, and assembles them into a library called libminicrypto.a.
 
+
+### Step 5
+Download these dependency libraries source tarballs (.tar.gz or .tgz) in Step 4 and place them into 
+```
+~/Downloads
+```
 
 ### Step 6
 Add build target in ~src/openvpn3/scripts/mac/build-boost
