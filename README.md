@@ -45,24 +45,19 @@ export BOOST_VERSION=boost_1_61_0
 ```
 
 1. [Boost] (http://www.boost.org/)
-
-https://sourceforge.net/projects/boost/files/boost/1.61.0/boost_1_61_0.tar.gz
+<br>https://sourceforge.net/projects/boost/files/boost/1.61.0/boost_1_61_0.tar.gz
 
 2. [PolarSSL (1.3.4 or higher)] (https://polarssl.org/)
-
-https://tls.mbed.org/download/polarssl-1.3.6-gpl.tgz
+<br>https://tls.mbed.org/download/polarssl-1.3.6-gpl.tgz
 
 3. [OpenSSL (1.0.1)] (http://www.openssl.org/)
-
-ftp://ftp.openssl.org/source/old/1.0.1/openssl-1.0.1g.tar.gz
+<br>ftp://ftp.openssl.org/source/old/1.0.1/openssl-1.0.1g.tar.gz
 
 4. [Snappy] (https://code.google.com/p/snappy/)
-
-https://github.com/google/snappy/releases/download/1.1.3/snappy-1.1.3.tar.gz
+<br>https://github.com/google/snappy/releases/download/1.1.3/snappy-1.1.3.tar.gz
 
 5. [LZ4] (https://code.google.com/p/lz4/)
-
-https://codeload.github.com/Cyan4973/lz4/tar.gz/r131
+<br>https://codeload.github.com/Cyan4973/lz4/tar.gz/r131
 
 Note that while LZO is listed in lib-versions, it is not required for Mac builds.
 
