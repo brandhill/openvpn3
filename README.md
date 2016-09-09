@@ -8,20 +8,20 @@ OpenVPN 3 should be built in a non-root Mac OS X account. Make sure that Xcode i
 ### Step 1
 Create a directory ~/src and ~/src/mac. This can be done with the command:
 ```
-mkdir -p ~/src/mac
+$ mkdir -p ~/src/mac
 ```
 
 ### Step 2
 Expand the OpenVPN 3 tarball:
 ```
-cd ~/src
-tar xf openvpn3.tar.gz
+$ cd ~/src
+$ tar xf openvpn3.tar.gz
 ```
 
 ### Step 3
 Export the shell variable O3 to point to the OpenVPN 3 top level directory:
 ```
-export O3=~/src/openvpn3
+$ export O3=~/src/openvpn3
 ```
 
 ### Step 4
@@ -59,7 +59,7 @@ OpenSSL is required, however OpenVPN 3 for Mac doesn't use OpenSSL in the standa
 ### Step 5
 Download these dependency libraries source tarballs (.tar.gz or .tgz) in Step 4 and place them into 
 ```
-~/Downloads
+$ ~/Downloads
 ```
 
 ### Step 6
@@ -101,23 +101,23 @@ Line 63: cd $LZ4_VERSION/lib
 ### Step 11
 Install cmake
 ```
-brew install cmake
+$ brew install cmake
 ```
 
 ### Step 12
 Build the dependencies:
 ```
-OSX_ONLY=1 $O3/scripts/mac/build-all
+$ OSX_ONLY=1 $O3/scripts/mac/build-all
 ```
 
 ### Step 13
 Now build the OpenVPN 3 client executable:
 ```
-cd $O3
-. ./vars-osx64
-. ./setpath
-cd test/ovpncli
-GCC_EXTRA="-stdlib=libc++" STRIP=1 PSSL=1 MINI=1 SNAP=1 LZ4=1 build cli
+$ cd $O3
+$ . ./vars-osx64
+$ . ./setpath
+$ cd test/ovpncli
+$ GCC_EXTRA="-stdlib=libc++" STRIP=1 PSSL=1 MINI=1 SNAP=1 LZ4=1 build cli
 ```
 
 This will build the OpenVPN 3 client library with a small client wrapper (cli).  It will also statically link in all external dependencies (Boost, PolarSSL, libminicrypto (derived from OpenSSL), LZ4, and Snappy), so "cli" may be distributed to other Macs and will run as a standalone executable. It's best to build OpenVPN 3 in C++11 mode to allow for the use of optimized move constructors. But keep in mind that OpenVPN 3 strictly follows the C++ 2003 standard (not C++ 2011), so building with -std=c++11 is optional for optimization purposes.
@@ -128,10 +128,10 @@ These build scripts will create a "fat" Mac OS X executable with support for bot
 ### Enjoy it
 #### To view the client wrapper options:
 ```
-./cli -h
+$ ./cli -h
 ```
 
 #### To connect:
 ```
-./cli client.ovpn
+$ ./cli YOUR_OVPN_FILE (EX: client.ovpn)
 ```
